@@ -1,0 +1,31 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "360653ec2058058c0448be93c387a2a6"
+name = "Sellor_Ai"
+application_url = "https://sellorai.com/"
+embedded = true
+handle = "sellor_ai_1"
+
+[build]
+
+[webhooks]
+api_version = "2025-10"
+
+[[webhooks.subscriptions]]
+compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
+uri = "https://sellorai.com/api/shops/webhooks/gdpr"
+
+[auth]
+redirect_urls = [
+  "https://sellorai.com/",
+  "https://sellorai.com/admin/oauth",
+  "https://sellorai.com/auth/shopify/callback",
+  "https://sellorai.com/auth/callback",
+  "https://sellorai.com/api/auth/callback"
+]
+
+[access_scopes]
+scopes = "read_products,write_products"
+
+[pos]
+embedded = false
