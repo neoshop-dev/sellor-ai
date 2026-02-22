@@ -49,3 +49,7 @@ TEST*.xml
 *.mov
 *.wmv
 
+-e 
+# Environment files
+*.env
+*.env.*
